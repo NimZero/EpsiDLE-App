@@ -22,7 +22,7 @@ class ClassicPage extends StatelessWidget {
               padding: const EdgeInsets.all(20.0),
               child: Image.asset(
                 'assets/images/logo_epsidle.png',
-                height: 250,
+                height: 150,
               ),
             ),
           ),
@@ -41,6 +41,21 @@ class ClassicPage extends StatelessWidget {
                   ),
                 ),
               )),
+          Align(
+            alignment: Alignment.bottomCenter,
+            child: Padding(
+              padding: const EdgeInsets.only(bottom: 10),
+              child: Container(
+                width: MediaQuery.of(context).size.width * 0.95,
+                height: MediaQuery.of(context).size.height * 0.55,
+                decoration: BoxDecoration(
+                  color: const Color.fromRGBO(86, 86, 160, 0.78),
+                  borderRadius: BorderRadius.circular(
+                      20.0), // Ajustez le rayon selon vos besoins
+                ),
+              ),
+            ),
+          ),
         ],
       ),
     );

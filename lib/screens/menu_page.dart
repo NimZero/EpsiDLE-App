@@ -120,7 +120,7 @@ class MenuScreen extends StatelessWidget {
                           const SizedBox(width: 8),
                           const Text(
                             'Image',
-                            textAlign: TextAlign.center,
+                            textAlign: TextAlign.right,
                           ),
                         ],
                       ),
