@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
-import 'screens/menu.dart';
+import 'screens/menu_page.dart';
+import 'screens/classic_page.dart';
+import 'screens/image_page.dart';
+import 'screens/anecdote_page.dart';
 
 void main() {
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  // ignore: use_super_parameters
   const MyApp({Key? key}) : super(key: key);
 
   @override
@@ -14,9 +16,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Epsidle',
-      home: MyHomePage(title: 'Epsidle'),
+      home: const MyHomePage(title: 'Epsidle'),
       routes: {
-        '/screen': (context) => const MenuScreen(),
+        '/menu': (context) => const MenuScreen(),
+        '/classic': (context) => const ClassicPage(),
+        '/image': (context) => const ImagePage(),
+        '/anecdote': (context) => const AnecdotePage(),
       },
     );
   }
@@ -24,7 +29,7 @@ class MyApp extends StatelessWidget {
 
 class MyHomePage extends StatelessWidget {
   final String title;
-  const MyHomePage({super.key, required this.title});
+  const MyHomePage({Key? key, required this.title}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -35,8 +40,7 @@ class MyHomePage extends StatelessWidget {
           Positioned.fill(
             child: Image.asset(
               'assets/images/fond.png',
-              fit: BoxFit
-                  .cover, // Couvre toute la zone, en conservant les proportions
+              fit: BoxFit.cover, // Couvre toute la zone, en conservant les proportions
             ),
           ),
           // Logo en haut
@@ -52,30 +56,26 @@ class MyHomePage extends StatelessWidget {
             ),
           ),
           Center(
-              child: ElevatedButton.icon(
-                  onPressed: () {
-                    Navigator.pushNamed(context, '/screen');
-
-                    // Action à effectuer lors du clic sur le bouton de connexion avec Google
-                    // Par exemple, ouvrir une fenêtre de connexion avec Google
-                    // ignore: avoid_print
-                    print('Connexion avec Google');
-                  },
-                  icon: Image.asset(
-                    'assets/images/google.png', // Chemin de l'icône de Google dans votre dossier d'assets
-                    width: 24, // Ajustez la taille de l'icône selon vos besoins
-                    height: 24,
-                  ),
-                  label: const Text('Se connecter avec Google'),
-                  style: ElevatedButton.styleFrom(
-                    foregroundColor: Colors.black,
-                    backgroundColor: Colors.white, // Couleur du texte du bouton
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(
-                          10), // Bordure arrondie du bouton
-                    ),
-                  )))
-          // Autre contenu ici, si nécessaire
+            child: ElevatedButton.icon(
+              onPressed: () {
+                Navigator.pushNamed(context, '/menu');
+                print('Connexion avec Google');
+              },
+              icon: Image.asset(
+                'assets/images/google.png',
+                width: 24,
+                height: 24,
+              ),
+              label: const Text('Se connecter avec Google'),
+              style: ElevatedButton.styleFrom(
+                foregroundColor: Colors.black,
+                backgroundColor: Colors.white,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10),
+                ),
+              ),
+            ),
+          ),
         ],
       ),
     );
