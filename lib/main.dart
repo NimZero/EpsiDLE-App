@@ -1,3 +1,4 @@
+import 'package:epsi_dle/screens/classement_page.dart';
 import 'package:flutter/material.dart';
 import 'screens/menu_page.dart';
 import 'screens/classic_page.dart';
@@ -22,6 +23,7 @@ class MyApp extends StatelessWidget {
         '/classic': (context) => const ClassicPage(),
         '/image': (context) => const ImagePage(),
         '/anecdote': (context) => const AnecdotePage(),
+        '/classement':(context) => const ClassementPage()
       },
     );
   }
@@ -38,7 +40,7 @@ class MyHomePage extends StatelessWidget {
         children: <Widget>[
           Positioned.fill(
             child: Image.asset(
-              'assets/images/fond.png',
+              'assets/images/background.png',
               fit: BoxFit.cover,
             ),
           ),
@@ -48,7 +50,7 @@ class MyHomePage extends StatelessWidget {
               padding:
                   const EdgeInsets.all(20.0), // Un peu de marge autour du logo
               child: Image.asset(
-                'assets/images/logo.png',
+                'assets/images/logo_epsidle.png',
                 height: 250, // Ajustez la taille de votre logo
               ),
             ),
@@ -60,7 +62,7 @@ class MyHomePage extends StatelessWidget {
                 print('Connexion avec Google');
               },
               icon: Image.asset(
-                'assets/images/google.png',
+                'assets/images/logo_google.png',
                 width: 24,
                 height: 24,
               ),

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class AnecdotePage extends StatelessWidget {
-  const AnecdotePage({Key? key}) : super(key: key);
+class ClassementPage extends StatelessWidget {
+  const ClassementPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

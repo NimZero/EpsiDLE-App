@@ -10,7 +10,7 @@ class MenuScreen extends StatelessWidget {
         children: <Widget>[
           Positioned.fill(
             child: Image.asset(
-              'assets/images/fond.png',
+              'assets/images/background.png',
               fit: BoxFit.cover,
             ),
           ),
@@ -19,7 +19,7 @@ class MenuScreen extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.all(20.0),
               child: Image.asset(
-                'assets/images/logo.png',
+                'assets/images/logo_epsidle.png',
                 height: 250,
               ),
             ),
@@ -37,7 +37,8 @@ class MenuScreen extends StatelessWidget {
                         Navigator.pushNamed(context, '/classic');
                       },
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: const Color.fromARGB(255, 142, 190, 84),
+                        backgroundColor:
+                            const Color.fromARGB(255, 142, 190, 84),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10),
                         ),
@@ -46,14 +47,14 @@ class MenuScreen extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           Image.asset(
-                            'assets/images/interro.png',
-                            width: 24,
-                            height: 24,
+                            'assets/images/point_interrogation.png',
+                            width: 30,
+                            height: 30,
                           ),
                           const SizedBox(width: 8),
                           const Text(
                             'Classic',
-                            textAlign: TextAlign.left,
+                            textAlign: TextAlign.center,
                           ),
                         ],
                       ),
@@ -79,14 +80,14 @@ class MenuScreen extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           Image.asset(
-                            'assets/images/interro.png',
-                            width: 24,
-                            height: 24,
+                            'assets/images/logo_citation.png',
+                            width: 30,
+                            height: 30,
                           ),
                           const SizedBox(width: 8),
                           const Text(
                             'Anecdote',
-                            textAlign: TextAlign.left,
+                            textAlign: TextAlign.center,
                           ),
                         ],
                       ),
@@ -112,14 +113,14 @@ class MenuScreen extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           Image.asset(
-                            'assets/images/interro.png',
-                            width: 24,
-                            height: 24,
+                            'assets/images/logo_image.png',
+                            width: 30,
+                            height: 30,
                           ),
                           const SizedBox(width: 8),
                           const Text(
                             'Image',
-                            textAlign: TextAlign.left,
+                            textAlign: TextAlign.center,
                           ),
                         ],
                       ),
@@ -127,6 +128,22 @@ class MenuScreen extends StatelessWidget {
                   ),
                 ),
               ],
+            ),
+          ),
+          Align(
+            alignment: Alignment.bottomCenter,
+            child: Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: IconButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/classement');
+                },
+                icon: Image.asset(
+                  'assets/images/logo_classement.png',
+                  width: 60,
+                  height: 60,
+                ),
+              ),
             ),
           ),
         ],
