@@ -36,14 +36,12 @@ class MyHomePage extends StatelessWidget {
     return Scaffold(
       body: Stack(
         children: <Widget>[
-          // Image de fond
           Positioned.fill(
             child: Image.asset(
               'assets/images/fond.png',
-              fit: BoxFit.cover, // Couvre toute la zone, en conservant les proportions
+              fit: BoxFit.cover,
             ),
           ),
-          // Logo en haut
           Align(
             alignment: Alignment.topCenter,
             child: Padding(
