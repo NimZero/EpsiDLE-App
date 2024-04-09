@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'screen/menu.dart';
+import 'screens/menu.dart';
 
 void main() {
   runApp(const MyApp());
@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
 
 class MyHomePage extends StatelessWidget {
   final String title;
-  MyHomePage({super.key, required this.title});
+  const MyHomePage({super.key, required this.title});
 
   @override
   Widget build(BuildContext context) {
