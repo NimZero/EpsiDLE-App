@@ -1,3 +1,4 @@
+import 'package:epsi_dle/models/user.dart';
 import 'package:epsi_dle/screens/classement_page.dart';
 import 'package:flutter/material.dart';
 import 'screens/menu_page.dart';
@@ -23,7 +24,16 @@ class MyApp extends StatelessWidget {
         '/classic': (context) => const ClassicPage(),
         '/image': (context) => const ImagePage(),
         '/anecdote': (context) => const AnecdotePage(),
-        '/classement':(context) => const ClassementPage()
+        '/classement': (context) => ClassementPage(
+              users: [
+                User('Alice', 20),
+                User('Bob', 15),
+                User('Charlie', 25),
+                User('David', 20),
+                User('Emma', 15),
+                User('Frank', 25),
+              ],
+            )
       },
     );
   }
